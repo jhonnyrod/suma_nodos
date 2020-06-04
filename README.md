@@ -31,7 +31,7 @@ Se realizó la instalación de la librería a través de CMD utilizando el sigui
 ```pip install p2pnetwork```
 
 ![alt text](https://github.com/jhonnyrod/suma_nodos/blob/master/p2pnetwork.jpeg)
-<div style="text-align:center">Figura 2 Instalación de la librería p2pnetwork</div>
+<p align="center">__Figura 2 Instalación de la librería p2pnetwork__</p>
 
 
 
