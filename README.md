@@ -186,7 +186,7 @@ El siguiente método es principal, el cual utilizamos para recibir el mensaje ju
 
 El siguiente fragmento de código es el empleado para enviar el mensaje al nodo siguiente:
 
-```node.send_to_node(n,enviar)```
+```node.send_to_node(n,solicitud)```
 
 # Ejecutando las pruebas ⚙️
 
@@ -195,8 +195,8 @@ El siguiente fragmento de código es el empleado para enviar el mensaje al nodo 
 A continuación, daremos a conocer la interfaz de programación de nuestra red peer to peer (P2P).
 Específicamente, adición de registros (datos), suma de nodos y salir del programa. Esta interfaz utiliza varios parámetros del programa para administrar. 
 
-![alt text](https://github.com/jhonnyrod/sisdistribuidos/blob/master/Ejemplo%20Peticion.png)
-
+<p align="center"><img src="https://github.com/jhonnyrod/suma_nodos/blob/master/Menu%20P2P.jpeg" /> </p>
+<p align="center">Figura 3 Interfaz gráfica</p>
 
 # Construido con 🛠️
 
