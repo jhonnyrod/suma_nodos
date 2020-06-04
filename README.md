@@ -141,7 +141,9 @@ Los métodos presentados en este documento son implementados con el lenguaje de 
 Hemos optado por llevar a cabo la implementación con Python, porque varios tipos de datos, módulos y bibliotecas ofrecidos hacen posible que la programación sea manejable.Por lo tanto, los siguientes ejemplos se presentan para ilustrar algunos de los beneficios del lenguaje.
 
 
-´´´node = Node("127.0.0.1", 8001, node_callback)´´´
+```node = Node("127.0.0.1", 8001, node_callback)```
+
+```node.connect_with_node('142.44.246.92', 8001)```
 
 
 # Ejecutando las pruebas ⚙️
