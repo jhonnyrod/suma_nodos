@@ -2,11 +2,8 @@
 
 El término sistema peer-to-peer (P2P) abarca un amplio conjunto de aplicaciones distribuidas que permiten compartir recursos informáticos mediante el intercambio directo entre sistemas. El objetivo de un sistema P2P es agregar recursos disponibles en el borde de Internet y compartirlos de manera cooperativa entre los usuarios.
 
-# ¿Qué es "Register"?🚀
-
 Este proyecto tiene como objetivo diseñar e implementar una arquitectura para obtener recursos de un modo distribuido basada en nodos.
 Un nodo es un proceso que realiza básicamente dos funciones: cargar número y solicitar suma por parte de otros nodos de la red.
-
 
 
 # Modelado 📖
