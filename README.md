@@ -26,9 +26,9 @@ Es una librería de red simplificada para construir redes punto a punto en Pytho
 Se realizó la instalación de la librería a través de CMD utilizando el siguiente comando:
 
 ```pip install p2pnetwork```
-
+<p style='text-align: center;'>
 ![alt text](https://github.com/jhonnyrod/suma_nodos/blob/master/p2pnetwork.jpeg)
-<p style='text-align: right;'> Figura 2 Instalación de la librería p2pnetwork </p>
+ Figura 2 Instalación de la librería p2pnetwork </p>
 
 
 
