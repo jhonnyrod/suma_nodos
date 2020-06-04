@@ -196,7 +196,7 @@ A continuación, daremos a conocer la interfaz de programación de nuestra red p
 Específicamente, adición de registros (datos), suma de nodos y salir del programa. Esta interfaz utiliza varios parámetros del programa para administrar. 
 
 <p align="center"><img src="https://github.com/jhonnyrod/suma_nodos/blob/master/Menu%20P2P.jpeg" /> </p>
-<p align="center">Figura 3 Interfaz gráfica - Menú inicial</p>
+
 
 # Construido con 🛠️
 
