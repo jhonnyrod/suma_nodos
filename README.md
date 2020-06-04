@@ -7,14 +7,13 @@ El término sistema peer-to-peer (P2P) abarca un amplio conjunto de aplicaciones
 Este proyecto tiene como objetivo diseñar e implementar una arquitectura para obtener recursos de un modo distribuido basada en nodos.
 Un nodo es un proceso que realiza básicamente dos funciones: cargar número y solicitar suma por parte de otros nodos de la red.
 
-![alt text](https://github.com/jhonnyrod/sisdistribuidos/blob/master/Modelo%20Register.jpeg)
+
 
 # Modelado 📖
 
-
 A continuación, podemos evidenciar un grupo de máquinas que están dispuestas en forma de un anillo para actuar como un servidor distribuido. Este grupo de máquinas se funcionará para proporcionar un mejor equilibrio de carga y una mayor disponibilidad.
 
-
+![alt text](https://github.com/jhonnyrod/sisdistribuidos/blob/master/Modelo%20Register.jpeg)
 
 # Pre-requisitos 📋
 
