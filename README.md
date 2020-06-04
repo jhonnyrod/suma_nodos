@@ -14,7 +14,7 @@ Un nodo es un proceso que realiza básicamente dos funciones: cargar número y s
 A continuación, podemos evidenciar un grupo de máquinas que están dispuestas en forma de un anillo para actuar como un servidor distribuido. Este grupo de máquinas se funcionará para proporcionar un mejor equilibrio de carga y una mayor disponibilidad.
 
 
-<img align="Center" width="1584" height="828" src="https://github.com/jhonnyrod/suma_nodos/blob/master/Modelado%20Peer-to-peer.jpeg">
+<img align="Center" src="https://github.com/jhonnyrod/suma_nodos/blob/master/Modelado%20Peer-to-peer.jpeg">
 
 # Pre-requisitos 📋
 
