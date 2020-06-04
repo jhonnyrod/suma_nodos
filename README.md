@@ -132,21 +132,28 @@ while True:
     except ValueError:
         print("Porfavor, ingresa solo numeros")
 
-def enviar_men():
-    node.send_to_nodes(5)
 ```
 # Metodos Empleados 🔧
 
 Los métodos presentados en este documento son implementados con el lenguaje de programación Python.
 Hemos optado por llevar a cabo la implementación con Python, porque varios tipos de datos, módulos y bibliotecas ofrecidos hacen posible que la programación sea manejable.Por lo tanto, los siguientes ejemplos se presentan para ilustrar algunos de los beneficios del lenguaje.
 
- ###### Descubriendo nodos 
- queremos que los nodos puedan enviarse mensajes entre sí y hablar, para esto necesitamos anunciar nuestro propio ip:port  de escucha.
-
+###### Descubriendo nodos 
+queremos que los nodos puedan enviarse mensajes entre sí y hablar, para esto necesitamos anunciar nuestro propio ip:port  de escucha.
+ 
 ```node = Node("127.0.0.1", 8001, node_callback)```
 
-```node.connect_with_node('142.44.246.92', 8001)```
+para iniciar el nodo utilizamos el siguiente código el cual inicia un nuevo hilo:
 
+```node.start()```
+
+En este punto necesitamos realizar la conexión con un nuevo nodo, lo cual se logra usando esta parte del código, es necesario especificar la Ip del nodo "vecino" y el puerto
+
+```node.connect_with_node('127.0.0.1', 8002)```
+
+```def node_callback(event, main_node, connected_node, data)```
+
+```node.send_to_node(n,enviar)```
 
 # Ejecutando las pruebas ⚙️
 
