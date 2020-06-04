@@ -22,9 +22,9 @@ Para la elaboración de este proyecto fue necesario utilizar una librería de Py
 
 Es una librería de red simplificada para construir redes punto a punto en Python. Esta librería fue diseñada para resolver el problema de encontrar nodos y evitar los NAT para que pueda concentrarse en escribir el código de su aplicación.
 
-•	Reenvío de puertos automatizados.
-•	Soporte para perforación de agujeros TCP / apertura simultánea.
-•	Conexión inversa (dígale a un nodo que se conecte a usted).
++ Reenvío de puertos automatizados.
++ Soporte para perforación de agujeros TCP / apertura simultánea.
++ Conexión inversa (dígale a un nodo que se conecte a usted).
 
 
 
