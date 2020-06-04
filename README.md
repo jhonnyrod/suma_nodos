@@ -151,7 +151,36 @@ En este punto necesitamos realizar la conexión con un nuevo nodo, lo cual se lo
 
 ```node.connect_with_node('127.0.0.1', 8002)```
 
-```def node_callback(event, main_node, connected_node, data)```
+El siguiente método es principal, el cual utilizamos para recibir el mensaje junto con otros datos como el nombre del evento y el nodo emisor, en este punto verificamos si el nodo que recibe el mensaje es el final y de ser así suma la cadena de números recibida por los otros nodos, en caso contrario realiza la conexión con un nuevo nodo empleando el código mencionado anteriormente enviando el mismo mensaje pero concatenando su número asignado en un archivo.txt local
+
+```def node_callback(event, main_node, connected_node, data)
+    try:
+        #aquí se verifican eventos en nuestra red
+        if event != 'node_request_to_stop': # node_request_to_stop does not have any connected_node, while it is the main_node that is stopping!
+            if event=="node_message":
+                solicitud=str(data)
+                if "sumar" in solicitud:
+                    global esfinal
+                    if  esfinal==True:
+                        numeros=solicitud.replace("sumar:","").split("-")
+                        suma=0
+                        for numero in numeros:
+                            try:
+                                suma+= int (numero)
+                            except Exception as e:
+                                suma=suma
+                        print(suma)
+                        esfinal=False
+                    else:
+                        
+                        node.connect_with_node('127.0.0.1', 8002)
+                        time.sleep(1)
+                        
+                        with open("F:/Documentos/Doceavo/Sistemas distribuidos/Suma_nodos/nodo1/numeros.txt", "r") as file:
+                            for line in file:
+                                solicitud=solicitud+line
+                        for n in node.nodes_outbound:        
+                            node.send_to_node(n,solicitud)```
 
 ```node.send_to_node(n,enviar)```
 
