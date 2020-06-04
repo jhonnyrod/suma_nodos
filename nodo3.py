@@ -7,13 +7,41 @@ from p2pnetwork.node import Node
 #  node          : the node (Node) that holds the node connections
 #  connected_node: the node (NodeConnection) that is involved
 #  data          : data that is send by the node (could be empty)
+
+#variable verificadora
+esfinal=False
+
 def node_callback(event, main_node, connected_node, data):
     try:
+        #aquí se verifican eventos en nuestra red
         if event != 'node_request_to_stop': # node_request_to_stop does not have any connected_node, while it is the main_node that is stopping!
             if event=="node_message":
-                print("sirve")
-                time.sleep(1)
-                node.send_to_nodes("hola")
+                solicitud=str(data)
+                if "sumar" in solicitud:
+                    global esfinal
+                    if  esfinal==True:
+                        numeros=solicitud.replace("sumar:","").split("-")
+                        suma=0
+                        for numero in numeros:
+                            try:
+                                suma+= int (numero)
+                            except Exception as e:
+                                suma=suma
+                        print(suma)
+                        esfinal=False
+                    else:
+                        
+                        node.connect_with_node('127.0.0.1', 8001)
+                        time.sleep(1)
+                        
+                        with open("F:/Documentos/Doceavo/Sistemas distribuidos/Suma_nodos/nodo3/numeros.txt", "r") as file:
+                            for line in file:
+                                solicitud=solicitud+line
+                        for n in node.nodes_outbound:        
+                            node.send_to_node(n,solicitud)
+                        
+                        
+                
 
     except Exception as e:
         print(e)
@@ -26,32 +54,39 @@ node = Node("127.0.0.1", 8003, node_callback)
 node.start()
 time.sleep(1)
 
-# Connect to another node, otherwise you do not have any network.
-node.connect_with_node('127.0.0.1', 8002)
-time.sleep(2)
-node.send_to_nodes("hola")
+
+
+
+#crear txt
+txt = open("F:/Documentos/Doceavo/Sistemas distribuidos/Suma_nodos/nodo3/numeros.txt","w")
+txt.close()
 
 while True:
     try: 
-        print("\n_____________BIENVENIDO___________\n"
-        +"\n Ingrese el numero de la acción que desea realizar:"
-        +"\n1. Agregar numero \n2.Sumar numero \n3. Salir")
+        print("\nMenu\n1. insertar número \n2.hacer suma de nodos \n3. Salir")
             
-        op = int(input(" \n : "))
+        opc = int(input(" \nQué desea realizar?: "))
 
-        if op == 1:
-            print("hilo 1")
-        elif op == 2:
+        if opc == 1:
+            num = input("\nEscriba el numero que desea agregar  ")
+            txt = open("F:/Documentos/Doceavo/Sistemas distribuidos/Suma_nodos/nodo3/numeros.txt","a")#Creando txt con la información del cliente
+            txt.write("{}-0".format(num))
+            txt.close()
+        elif opc == 2:
             numbers = []
-            with open("numeros.txt", "r") as file:
+            
+            node.connect_with_node('127.0.0.1', 8001)
+            time.sleep(1)
+            print(node)
+            with open("F:/Documentos/Doceavo/Sistemas distribuidos/Suma_nodos/nodo3/numeros.txt", "r") as file:
+                enviar="sumar:"
                 for line in file:
-                    fields = line.split(",")
-                    #print(line.rstrip("n"))
-                subnumbers = (int(field) for field in fields)
-                numbers.extend(subnumbers)
-                suma = sum(numbers)
-            print("\nLa suma es: "+str(suma))
-        elif op == 3:
+                    enviar=enviar+line
+            for n in node.nodes_outbound:        
+                node.send_to_node(n,enviar)
+            esfinal=True
+            
+        elif opc == 3:
             node_2.stop()
             print('end')
             break
