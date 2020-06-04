@@ -140,7 +140,7 @@ def enviar_men():
 Los métodos presentados en este documento son implementados con el lenguaje de programación Python.
 Hemos optado por llevar a cabo la implementación con Python, porque varios tipos de datos, módulos y bibliotecas ofrecidos hacen posible que la programación sea manejable.Por lo tanto, los siguientes ejemplos se presentan para ilustrar algunos de los beneficios del lenguaje.
 
- ##Descubriendo nodos
+ ###### Descubriendo nodos 
  queremos que los nodos puedan enviarse mensajes entre sí y hablar, para esto necesitamos anunciar nuestro propio ip:port  de escucha.
 
 ```node = Node("127.0.0.1", 8001, node_callback)```
