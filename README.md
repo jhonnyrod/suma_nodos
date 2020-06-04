@@ -12,7 +12,7 @@ A continuación, podemos evidenciar un grupo de máquinas que están dispuestas 
 
 
 
-<span style="display:block;text-align:center">![alt text](https://github.com/jhonnyrod/suma_nodos/blob/master/Modelado%20Peer-to-peer.jpeg) </span>
+<p align="center">![alt text](https://github.com/jhonnyrod/suma_nodos/blob/master/Modelado%20Peer-to-peer.jpeg) </p>
 
 
 
