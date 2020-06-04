@@ -26,12 +26,9 @@ Es una librería de red simplificada para construir redes punto a punto en Pytho
 + Soporte para perforación de agujeros TCP / apertura simultánea.
 + Conexión inversa (dígale a un nodo que se conecte a usted).
 
-
-
-
 Se realizó la instalación de la librería a través de CMD utilizando el siguiente comando:
 
-pip install p2pnetwork
+**pip install p2pnetwork**
 
 
 
