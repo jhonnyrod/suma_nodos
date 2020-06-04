@@ -31,22 +31,12 @@ Se realizó la instalación de la librería a través de CMD utilizando el sigui
 ```pip install p2pnetwork```
 
 ![alt text](https://github.com/jhonnyrod/suma_nodos/blob/master/p2pnetwork.jpeg)
-<p align="center">__Figura 2 Instalación de la librería p2pnetwork__</p>
+<p align="center">Figura 2 Instalación de la librería p2pnetwork</p>
 
-
-
-
-# Metodos Empleados 🔧
-
-
-    
-Luego Clonar el proyecto
-
-	git clone https://github.com/jhonnyrod/sisdistribuidos
 
 # Codigo ⚙️
 
-Clase init.py
+Clase nodo.py
 ```
 import sys
 import time
@@ -145,6 +135,14 @@ while True:
 def enviar_men():
     node.send_to_nodes(5)
 ```
+# Metodos Empleados 🔧
+
+Los métodos presentados en este documento son implementados con el lenguaje de programación Python.
+Hemos optado por llevar a cabo la implementación con Python, porque varios tipos de datos, módulos y bibliotecas ofrecidos hacen posible que la programación sea manejable.Por lo tanto, los siguientes ejemplos se presentan para ilustrar algunos de los beneficios del lenguaje.
+
+
+´´´node = Node("127.0.0.1", 8001, node_callback)´´´
+
 
 # Ejecutando las pruebas ⚙️
 
