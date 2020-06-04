@@ -18,6 +18,21 @@ A continuación, podemos evidenciar un grupo de máquinas que están dispuestas 
 
 # Pre-requisitos 📋
 
+Para la elaboración de este proyecto fue necesario utilizar una librería de Python llamada p2p networking.
+
+Es una librería de red simplificada para construir redes punto a punto en Python. Esta librería fue diseñada para resolver el problema de encontrar nodos y evitar los NAT para que pueda concentrarse en escribir el código de su aplicación.
+
+•	Reenvío de puertos automatizados.
+•	Soporte para perforación de agujeros TCP / apertura simultánea.
+•	Conexión inversa (dígale a un nodo que se conecte a usted).
+
+
+
+
+Se realizó la instalación de la librería a través de CMD utilizando el siguiente comando:
+
+pip install p2pnetwork
+
 
 
 # Instalación 🔧
